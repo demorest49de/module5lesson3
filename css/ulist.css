@@ -1,0 +1,8 @@
+.list{
+    padding: 20px 0 0 35px;
+    list-style-type: decimal;
+}
+
+.item{
+    margin-bottom: 5px;
+}
