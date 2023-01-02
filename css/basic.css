@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+section {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1920px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.hide {
+    display: none;
+}
