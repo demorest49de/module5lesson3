@@ -6,31 +6,31 @@ const getInput = () => {
   return result ? result.trim().toLowerCase() : null;
 };
 const addLi = (userInput) => {
-
   console.log(': ', userInput);
   switch (true) {
-    case userInput === 'del':
+    case userInput === 'del': {
       if (list.lastElementChild) {
         list.removeChild(list.lastElementChild);
         console.log(list.lastElementChild);
       }
       return addLi(getInput());
-      break;
-    case userInput === 'clear':
+    }
+    case userInput === 'clear': {
       while (list.firstChild) {
         list.removeChild(list.firstChild);
       }
       return addLi(getInput());
-      break;
-    case userInput === null || userInput === 'exit':
+    }
+    case userInput === null || userInput === 'exit': {
       return;
-      break;
-    default:
+    }
+    default: {
       const li = document.createElement('li');
       li.textContent = userInput;
       li.classList.add('item');
       list.append(li);
       return addLi(getInput());
+    }
   }
 };
 
