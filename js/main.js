@@ -21,7 +21,7 @@ const addLi = (userInput) => {
       }
       return addLi(getInput());
     }
-    case userInput === null || userInput === 'exit': {
+    case userInput === null || userInput === '' || userInput === 'exit': {
       return;
     }
     default: {
