@@ -3,7 +3,8 @@
 const list = document.querySelector('.list');
 const getInput = () => {
   const result = prompt(`Введите строку`);
-  return result ? result.trim().toLowerCase() : null;
+  console.log(': ',result);
+  return result !== null ? result.trim().toLowerCase() : result;
 };
 
 const del = () => {
@@ -27,16 +28,21 @@ const doDefault = (userInput) => {
 };
 
 const addLi = (userInput) => {
-  console.log(': ', userInput);
+
   switch (true) {
     case userInput === 'del': {
       del();
+      break;
     }
     case userInput === 'clear': {
       clear();
+      break;
     }
-    case userInput === null || userInput === '' || userInput === 'exit': {
+    case userInput === 'exit' || userInput === null: {
       return false;
+    }
+    case userInput === '': {
+      return true;
     }
     default: {
       doDefault(userInput);
